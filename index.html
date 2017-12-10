@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="style.css" />  
 </head>
 <body>
-    <form id="sampleForm" class="customStyle">
-        <label>
+    <form id="sampleForm" class="customStyleForm">
+        <label class="textFieldLabel">
             text input 
-            <input type="text" placeholder="placeholder text" class="textInput" id="textInput1">
+            <input type="text" placeholder="placeholder text" class="textInput" id="textInput1" required minlength="3" maxlength="16">
             <div class="errorBox"></div>
         </label>
 
         <label class="error">
             text input w/ validation error
-            <input type="text" placeholder="placeholder text" class="textInput" id="textInput2">
+            <input type="text" placeholder="placeholder text" class="textInput" id="textInput2" required minlength="3" maxlength="16">
             <div class="errorBox">please enter a valid username</div>
         </label>
 
@@ -25,53 +25,45 @@
             select box - open
             <div class="selectBar open">
                 <div class="selectLabel">please select an option...</div>
-                <div class="selectOption">option 1</div>
-                <div class="selectOption">option 2</div>
-                <div class="selectOption">option 3</div>
-                <div class="selectOption">option 4</div>
-                <div class="selectOption">option 5</div>
-            </div>
-            <div class="selectBar">
-                    <div class="selectLabel">please select an option...</div>
+                <div class="optionHolder">
                     <div class="selectOption">option 1</div>
                     <div class="selectOption">option 2</div>
                     <div class="selectOption">option 3</div>
                     <div class="selectOption">option 4</div>
                     <div class="selectOption">option 5</div>
                 </div>
-        </label>
-
-        <label>
-            select box - open
-            <select>
-                <option value="">Please select an option...</option>
-                <option value="option1">option 1</option>
-                <option value="option2">option 2</option>
-                <option value="option3">option 3</option>
-                <option value="option4">option 4</option>
-                <option value="option5">option 5</option>
-            </select>
+            </div>
+            <div class="selectBar">
+                    <div class="selectLabel">please select an option...</div>
+                    <div class="optionHolder">
+                        <div class="selectOption">option 1</div>
+                        <div class="selectOption">option 2</div>
+                        <div class="selectOption">option 3</div>
+                        <div class="selectOption">option 4</div>
+                        <div class="selectOption">option 5</div>
+                    </div>
+                </div>
         </label>
 
         <label>
             checkbox
             <div>
-                <span class="checkboxHolder" id="checkbox1Holder">
-                    <input type="checkbox">
-                </span>
-                <span class="checkboxHolder checked" id="checkbox2Holder">
-                        <input type="checkbox" checked>
-                </span>
+                <div class="checkboxHolder" id="checkbox1Holder">
+                    <input type="checkbox" name="checkbox1" id="checkbox1">
+                </div>
+                <div class="checkboxHolder checked" id="checkbox2Holder">
+                        <input type="checkbox"  name="checkbox2" id="checkbox2" checked>
+                </div>
             </div>
         </label>
         <label>
             radio
             <div>
                 <span class="radioHolder" id="radio1Holder">
-                    <input type="radio">
+                    <input type="radio" name="radios">
                 </span>
                 <span class="radioHolder checked" id="radio2Holder">
-                    <input type="radio" checked>
+                    <input type="radio" checked name="radios">
                 </span>
             </div>
         </label>
@@ -82,6 +74,7 @@
             </div>
         </label>
     </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>    
     <script src="script.js"></script>  
 </body>
 </html>
